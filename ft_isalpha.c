@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 10:45:26 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/17 11:02:06 by dclark           ###   ########.fr       */
+/*   Updated: 2020/11/29 21:45:49 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	unsigned char	a;
-
-	a = (unsigned char)(c);
-	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-		return (1024);
-	else
-		return (0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }
