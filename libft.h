@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:02:22 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/25 14:50:34 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/16 09:03:22 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 int				ft_atoi(const char *nptr);
+long			ft_atoil(const char *nptr);
 char			*ft_itoa(int n);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

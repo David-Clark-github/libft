@@ -6,7 +6,7 @@
 #    By: dclark <dclark@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 10:38:53 by dclark            #+#    #+#              #
-#    Updated: 2020/11/26 20:02:14 by dclark           ###   ########.fr        #
+#    Updated: 2021/05/16 09:03:38 by dclark           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCSC	= ft_memset.c \
 		  ft_strlcat.c \
 		  ft_strnstr.c \
 		  ft_atoi.c \
+		  ft_atoil.c \
 		  ft_calloc.c\
 		  ft_strdup.c \
 		  ft_substr.c \

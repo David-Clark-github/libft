@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoil.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 02:12:35 by dclark            #+#    #+#             */
-/*   Updated: 2021/03/06 11:50:48 by dclark           ###   ########.fr       */
+/*   Created: 2020/11/18 21:14:12 by dclark            #+#    #+#             */
+/*   Updated: 2021/05/16 09:06:22 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+long	ft_atoil(const char *nptr)
 {
-	int i;
+	long	res;
+	int		index;
+	int		signe;
 
-	i = 0;
-	if (!s)
-		return (0);
-	while (s[i])
-		i++;
-	return (i);
+	res = 0;
+	index = 0;
+	signe = 1;
+	while ((nptr[index] >= '\t' && nptr[index] <= '\r') || nptr[index] == ' ')
+		index++;
+	if (nptr[index] == '-')
+		signe *= -1;
+	if (nptr[index] == '-' || nptr[index] == '+')
+		index++;
+	while (nptr[index] >= '0' && nptr[index] <= '9')
+	{
+		res = (res * 10) + nptr[index] - '0';
+		index++;
+	}
+	return (res * signe);
 }
