@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:50:31 by dclark            #+#    #+#             */
-/*   Updated: 2021/05/21 11:33:04 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 12:21:59 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,23 +80,24 @@ char	**ft_split(char const *s, char c)
 	int		i_sp;
 	int		i_s;
 
-	i_sp = 0;
+	i_sp = -1;
 	i_s = 0;
 	if (s == NULL)
 		return (NULL);
-	if (!(split = malloc(sizeof(char *) * (tab_len(s, c) + 1))))
+	split = malloc(sizeof(char *) * (tab_len(s, c) + 1));
+	if (!split)
 		return (NULL);
-	while (i_sp < tab_len(s, c))
+	while (++i_sp < tab_len(s, c))
 	{
 		while (size_word(s, c, i_s) == 0)
 			i_s++;
-		if (!(split[i_sp] = copy(s, size_word(s, c, i_s), i_s)))
+		split[i_sp] = copy(s, size_word(s, c, i_s), i_s);
+		if (!split[i_sp])
 		{
 			clean_split(split, i_sp);
 			return (NULL);
 		}
 		i_s += size_word(s, c, i_s);
-		i_sp++;
 	}
 	split[i_sp] = NULL;
 	return (split);

@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 23:38:14 by dclark            #+#    #+#             */
-/*   Updated: 2021/05/21 11:49:47 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 12:30:54 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,14 @@ static int	index_last(char const *s1, char const *set)
 	return (l);
 }
 
+static int	toto(char *trim, int i_l, int i_s)
+{
+	trim = malloc(sizeof(char) * ((i_l - i_s) + 2));
+	if (!trim)
+		return (1);
+	return (0);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
@@ -71,16 +79,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i_s = index_start(s1, set);
 	i_l = index_last(s1, set);
 	if (i_l >= i_s)
-	{
-		trim = malloc(sizeof(char) * ((i_l - i_s) + 2));
-		if (!trim)
+		if (toto(trim, i_l, i_s))
 			return (NULL);
-	}
 	while (i_s <= i_l)
 		trim[i_t++] = s1[i_s++];
 	if (i_t == 0)
-		if (!(trim = malloc(sizeof(char))))
+	{
+		trim = malloc(sizeof(char));
+		if (!trim)
 			return (NULL);
+	}
 	trim[i_t] = '\0';
 	return (trim);
 }
