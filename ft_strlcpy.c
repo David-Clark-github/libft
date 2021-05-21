@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:02:45 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/28 17:10:20 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:43:01 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	str_l(const char *src)
 	return (i);
 }
 
-size_t			ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 

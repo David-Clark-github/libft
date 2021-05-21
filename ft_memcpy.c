@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 02:14:59 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/28 16:41:21 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:30:33 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *s;
-	unsigned char *d;
+	unsigned char	*s;
+	unsigned char	*d;
 
 	if (!dest && !src)
 		return (NULL);

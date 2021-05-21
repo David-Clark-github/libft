@@ -6,19 +6,20 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:50:31 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/28 15:08:46 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:33:04 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*copy(char const *s, int len, int i_s)
+static char	*copy(char const *s, int len, int i_s)
 {
 	int		i;
 	char	*copy;
 
 	i = 0;
-	if (!(copy = malloc(sizeof(char) * len + 1)))
+	copy = malloc(sizeof(char) * len + 1);
+	if (!copy)
 		return (NULL);
 	while (i < len)
 	{
@@ -30,7 +31,7 @@ static char		*copy(char const *s, int len, int i_s)
 	return (copy);
 }
 
-static int		size_word(char const *s, char c, int i_s)
+static int	size_word(char const *s, char c, int i_s)
 {
 	int	res;
 
@@ -47,7 +48,7 @@ static int		size_word(char const *s, char c, int i_s)
 ** Return the number of element NOT including the terminating NULL
 */
 
-static int		tab_len(char const *s, char c)
+static int	tab_len(char const *s, char c)
 {
 	int	i;
 	int	res;
@@ -62,7 +63,7 @@ static int		tab_len(char const *s, char c)
 	return (res);
 }
 
-static void		clean_split(char **split, int i_sp)
+static void	clean_split(char **split, int i_sp)
 {
 	while (i_sp)
 	{
@@ -73,7 +74,7 @@ static void		clean_split(char **split, int i_sp)
 	free(split);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	int		i_sp;

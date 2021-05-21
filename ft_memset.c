@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 02:14:41 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/17 02:14:45 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:30:58 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *dest;
+	unsigned char	*dest;
 
 	dest = s;
 	while (0 < n--)

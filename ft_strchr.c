@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:44:01 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/17 12:47:03 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:36:25 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)(c))
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i++;
 	}
 	if (c == 0)
-		return ((char*)(s + i));
+		return ((char *)(s + i));
 	return (0);
 }

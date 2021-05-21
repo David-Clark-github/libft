@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:23:30 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/18 21:06:46 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:45:01 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int i_b;
-	int i_l;
+	int	i_b;
+	int	i_l;
 
 	i_b = 0;
 	i_l = 0;
 	if (little[0] == '\0')
-		return ((char*)(big));
+		return ((char *)(big));
 	while (big[i_b] && i_b < (int)(len))
 	{
 		if (big[i_b] == little[i_l])
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			while (big[i_b + i_l] == little[i_l] && (i_b + i_l) < (int)(len))
 			{
 				if (little[i_l + 1] == '\0')
-					return ((char*)(&big[i_b]));
+					return ((char *)(&big[i_b]));
 				i_l++;
 			}
 		}

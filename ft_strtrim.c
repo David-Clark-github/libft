@@ -6,13 +6,13 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 23:38:14 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/29 21:00:11 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:49:47 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		is_set(char c, char const *set)
+static int	is_set(char c, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ static int		is_set(char c, char const *set)
 	return (0);
 }
 
-static int		index_start(char const *s1, char const *set)
+static int	index_start(char const *s1, char const *set)
 {
 	int	s;
 
@@ -41,7 +41,7 @@ static int		index_start(char const *s1, char const *set)
 	return (s);
 }
 
-static int		index_last(char const *s1, char const *set)
+static int	index_last(char const *s1, char const *set)
 {
 	int	l;
 
@@ -58,7 +58,7 @@ static int		index_last(char const *s1, char const *set)
 	return (l);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
 	int		i_s;
@@ -72,7 +72,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 	i_l = index_last(s1, set);
 	if (i_l >= i_s)
 	{
-		if (!(trim = malloc(sizeof(char) * ((i_l - i_s) + 2))))
+		trim = malloc(sizeof(char) * ((i_l - i_s) + 2));
+		if (!trim)
 			return (NULL);
 	}
 	while (i_s <= i_l)

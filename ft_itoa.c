@@ -6,13 +6,13 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 14:50:01 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/26 20:28:23 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 11:26:41 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		malloc_len(long nb)
+static int	malloc_len(long nb)
 {
 	int	res;
 
@@ -32,7 +32,7 @@ static int		malloc_len(long nb)
 	return (res);
 }
 
-static char		*alloc_dest(char *dest, long nb, int len)
+static char	*alloc_dest(char *dest, long nb, int len)
 {
 	if (nb == 0)
 		dest[0] = '0';
@@ -50,7 +50,7 @@ static char		*alloc_dest(char *dest, long nb, int len)
 	return (dest);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long	nb;
 	int		m_len;
@@ -58,7 +58,8 @@ char			*ft_itoa(int n)
 
 	nb = (long)n;
 	m_len = malloc_len(nb);
-	if (!(dest = malloc(sizeof(char) * m_len)))
+	dest = malloc(sizeof(char) * m_len);
+	if (!dest)
 		return (NULL);
 	dest[m_len - 1] = '\0';
 	dest = alloc_dest(dest, nb, m_len - 2);
