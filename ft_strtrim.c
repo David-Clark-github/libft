@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 23:38:14 by dclark            #+#    #+#             */
-/*   Updated: 2021/05/21 12:30:54 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 12:47:07 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i_t = 0;
 	i_s = index_start(s1, set);
 	i_l = index_last(s1, set);
+	trim = NULL;
 	if (i_l >= i_s)
-		if (toto(trim, i_l, i_s))
+		if (toto(trim, i_l, i_s) == 0)
 			return (NULL);
 	while (i_s <= i_l)
 		trim[i_t++] = s1[i_s++];
