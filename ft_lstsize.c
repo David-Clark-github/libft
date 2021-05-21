@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:57:14 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/24 18:01:56 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 12:10:43 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int res;
+	int	res;
 
 	res = 0;
 	while (lst)

@@ -6,7 +6,7 @@
 /*   By: dclark <dclark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:16:53 by dclark            #+#    #+#             */
-/*   Updated: 2020/11/24 20:45:24 by dclark           ###   ########.fr       */
+/*   Updated: 2021/05/21 12:10:23 by dclark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*dest;
 
-	if (!(dest = malloc(sizeof(t_list))))
+	dest = malloc(sizeof(t_list));
+	if (!dest)
 		return (NULL);
 	dest->content = content;
 	dest->next = NULL;
